@@ -1,10 +1,36 @@
 {
   "name": "ngx-cookie-handler",
-  "version": "17.0.0",
+  "version": "17.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coderons/ngx-cookie-handler.git"
+  },
+  "keywords": [
+    "angular2",
+    "angular",
+    "ng2",
+    "ng",
+    "cookie",
+    "cookies",
+    "angular2-cookie",
+    "angular2-cookies",
+    "ng2-cookies",
+    "ng2-cookie",
+    "ng-cookies",
+    "ng-cookie",
+    "ngx-cookie",
+    "ngx-cookies"
+  ],
+  "author": "Coderons, Samet Alemdar <sa.alemdar@hotmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/coderons/ngx-cookie-handler#readme",
+  "bugs": {
+    "url": "https://github.com/coderons/ngx-cookie-handler/issues"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build ngx-cookie-handler --configuration production",
+    "build": "ng build ngx-cookie-handler --configuration production && ng build ngx-cookie-handler-ssr --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "ngx-cookie-handler",
+  "name": "ngx-cookie-handler-ssr",
   "version": "17.0.1",
   "repository": {
     "type": "git",
@@ -29,7 +29,9 @@
   },
   "peerDependencies": {
     "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0"
+    "@angular/core": "^17.0.0",
+    "@angular/ssr": "^17.0.1",
+    "ngx-cookie-handler": "^17.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -14,9 +14,6 @@
     "paths": {
       "ngx-cookie-handler": [
         "./dist/ngx-cookie-handler"
-      ],
-      "ngx-cookie-handler-ssr": [
-        "./dist/ngx-cookie-handler-ssr"
       ]
     },
     "declaration": false,

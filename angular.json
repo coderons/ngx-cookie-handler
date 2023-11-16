@@ -3,36 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-cookie-handler-ssr": {
-      "projectType": "library",
-      "root": "projects/ngx-cookie-handler-ssr",
-      "sourceRoot": "projects/ngx-cookie-handler-ssr/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/ngx-cookie-handler-ssr/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/ngx-cookie-handler-ssr/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/ngx-cookie-handler-ssr/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/ngx-cookie-handler-ssr/tsconfig.spec.json",
-            "polyfills": ["zone.js", "zone.js/testing"]
-          }
-        }
-      }
-    },
     "ngx-cookie-handler": {
       "projectType": "library",
       "root": "projects/ngx-cookie-handler",

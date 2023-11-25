@@ -14,9 +14,11 @@ export class CookieService implements ICookieService {
 
   protected options: CookieOptions;
 
-  constructor(@Inject(DOCUMENT) private document: any,
+  constructor(
+    @Inject(DOCUMENT) private document: any,
     private optionsProvider: CookieOptionsProvider,
-    @Inject(COOKIE_WRITER) private cookieWriterService: ICookieWriterService) {
+    @Inject(COOKIE_WRITER) private cookieWriterService: ICookieWriterService
+  ) {
     this.options = this.optionsProvider.options;
   }
 

@@ -5,14 +5,17 @@ import { CookieOptions } from './cookie.model';
 import { COOKIE_OPTIONS } from './tokens';
 import { mergeOptions } from './utils';
 
-@Injectable()
+
+@Injectable({
+  providedIn: 'root'
+})
 export class CookieOptionsProvider {
 
   readonly options: CookieOptions;
   private readonly defaultOptions: CookieOptions;
 
   constructor(@Inject(COOKIE_OPTIONS) options: CookieOptions = {},
-              private injector: Injector) {
+    private injector: Injector) {
     this.defaultOptions = {
       path: this.injector.get(APP_BASE_HREF, '/'),
       domain: undefined,

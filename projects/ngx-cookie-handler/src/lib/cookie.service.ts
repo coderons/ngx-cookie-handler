@@ -6,14 +6,17 @@ import { CookieDict, CookieOptions, ICookieService, ICookieWriterService } from 
 import { COOKIE_WRITER } from './tokens';
 import { isNil, isPresent, mergeOptions, parseCookieString } from './utils';
 
-@Injectable()
+
+@Injectable({
+  providedIn: 'root'
+})
 export class CookieService implements ICookieService {
 
   protected options: CookieOptions;
 
   constructor(@Inject(DOCUMENT) private document: any,
-              private optionsProvider: CookieOptionsProvider,
-              @Inject(COOKIE_WRITER) private cookieWriterService: ICookieWriterService) {
+    private optionsProvider: CookieOptionsProvider,
+    @Inject(COOKIE_WRITER) private cookieWriterService: ICookieWriterService) {
     this.options = this.optionsProvider.options;
   }
 

@@ -2,10 +2,11 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { COOKIE_OPTIONS, COOKIE_WRITER, CookieModule, CookieOptions, CookieOptionsProvider } from 'ngx-cookie-handler';
 
 import { CookieBackendWriterService } from './cookie-backend-writer.service';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
-  imports: [CookieModule],
+  imports: [CommonModule, CookieModule],
   providers: [CookieOptionsProvider]
 })
 export class CookieBackendModule {

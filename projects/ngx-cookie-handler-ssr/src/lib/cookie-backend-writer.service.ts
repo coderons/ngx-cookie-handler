@@ -6,7 +6,10 @@ const COOKIE_SEPARATOR = ';';
 const REQUEST = new InjectionToken<Request>('REQUEST');
 const RESPONSE = new InjectionToken<Response>('RESPONSE');
 
-@Injectable()
+
+@Injectable({
+  providedIn: 'root'
+})
 export class CookieBackendWriterService implements ICookieWriterService {
   constructor(@Optional() @Inject(REQUEST) private request: Request,
     @Optional() @Inject(RESPONSE) private response: Response) { }

@@ -4,10 +4,13 @@ import { Inject, Injectable } from '@angular/core';
 import { CookieOptions, ICookieWriterService } from './cookie.model';
 import { buildCookieString } from './utils';
 
-@Injectable()
+
+@Injectable({
+  providedIn: 'root'
+})
 export class CookieWriterService implements ICookieWriterService {
 
-  constructor(@Inject(DOCUMENT) private document: any) {}
+  constructor(@Inject(DOCUMENT) private document: any) { }
 
   readAllAsString(): string {
     return this.document.cookie || '';

@@ -1,6 +1,6 @@
 {
   "name": "ngx-cookie-handler-ssr",
-  "version": "17.0.2",
+  "version": "17.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/coderons/ngx-cookie-handler.git"
@@ -31,7 +31,7 @@
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
     "@angular/ssr": "^17.0.1",
-    "ngx-cookie-handler": "^17.0.0"
+    "ngx-cookie-handler": "^17.0.3"
   },
   "dependencies": {
     "tslib": "^2.3.0"

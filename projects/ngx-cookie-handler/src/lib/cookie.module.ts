@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CookieWriterService } from './cookie-writer.service';
 
@@ -10,6 +10,7 @@ import { COOKIE_OPTIONS, COOKIE_WRITER } from './tokens';
 
 
 @NgModule({
+  imports: [CommonModule],
   providers: [CookieOptionsProvider]
 })
 export class CookieModule {
@@ -21,9 +22,9 @@ export class CookieModule {
     return {
       ngModule: CookieModule,
       providers: [
-        {provide: COOKIE_OPTIONS, useValue: options},
-        {provide: COOKIE_WRITER, useClass: CookieWriterService},
-        {provide: CookieService, useFactory: cookieServiceFactory, deps: [DOCUMENT, CookieOptionsProvider, COOKIE_WRITER]}
+        { provide: COOKIE_OPTIONS, useValue: options },
+        { provide: COOKIE_WRITER, useClass: CookieWriterService },
+        { provide: CookieService, useFactory: cookieServiceFactory, deps: [DOCUMENT, CookieOptionsProvider, COOKIE_WRITER] }
       ]
     };
   }
